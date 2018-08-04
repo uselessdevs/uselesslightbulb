@@ -1,0 +1,61 @@
+# Project
+.idea
+.vscode
+
+# Node
+node_modules
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Package Managers
+yarn-error.log
+npm-debug.log
+
+# Build
+build
+vendor/*-manifest.json
+
+# Docs
+gh-pages
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+build/*
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db

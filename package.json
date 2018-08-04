@@ -1,0 +1,19 @@
+{
+  "name": "useless-lightbulb-party",
+  "version": "0.0.1",
+  "author": "Useless Devs",
+  "license": "MIT",
+  "scripts": {
+    "precompile-rinkeby": "rm -Rf build/contracts && rm -Rf public/build/contracts/*",
+    "compile-rinkeby": "truffle compile && truffle migrate --network rinkeby",
+    "postcompile-rinkeby": "cp build/contracts/* public/build/contracts",
+    "predeploy": "npm run compile-rinkeby",
+    "deploy": "firebase deploy"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "truffle": "^4.1.13",
+    "truffle-hdwallet-provider": "0.0.6"
+  }
+}
