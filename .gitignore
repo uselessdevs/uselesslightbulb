@@ -60,7 +60,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/truffle.js
-truffle
+mnemonic
+infura_access_token
 /contracts
 /migrations
