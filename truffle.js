@@ -2,7 +2,7 @@
 require('babel-register');
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const infuraApikey = 'aeaa556522444ac3a89a949a5b752f46';
-const mnemonic = 'doll matrix wish party dragon sibling day solve jungle nest fame theme';
+let mnemonic = 'doll matrix wish party dragon sibling day solve jungle nest fame theme';
 
 module.exports = {
   migrations_directory: "./migrations",
@@ -18,9 +18,9 @@ module.exports = {
     },
     rinkeby: {
       provider: function () {
-        return new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraApikey}`);
+        return new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/${infuraApikey}`);
       },
-      network_id: 4,
+      network_id: 1,
     }
   },
 };
