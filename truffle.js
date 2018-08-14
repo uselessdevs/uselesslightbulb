@@ -1,8 +1,10 @@
 // Allows us to use ES6 in our migrations and tests.
 require('babel-register');
+const { readFileSync } = require('fs');
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const infuraApikey = 'aeaa556522444ac3a89a949a5b752f46';
-let mnemonic = 'doll matrix wish party dragon sibling day solve jungle nest fame theme';
+
+const mnemonic = readFileSync('./mnemonic', 'utf-8');
+const infuraApikey = readFileSync('./infura_access_token', 'utf-8');
 
 module.exports = {
   migrations_directory: "./migrations",
@@ -19,6 +21,12 @@ module.exports = {
     rinkeby: {
       provider: function () {
         return new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/${infuraApikey}`);
+      },
+      network_id: 1,
+    },
+    mainnet: {
+      provider: function () {
+        return new HDWalletProvider(mnemonic, `https://mainnet.infura.io/v3/${infuraApikey}`);
       },
       network_id: 1,
     }
